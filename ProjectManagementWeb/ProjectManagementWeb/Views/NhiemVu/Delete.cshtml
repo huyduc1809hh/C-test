@@ -1,0 +1,105 @@
+﻿@model ProjectManagementWeb.Models.NhiemVu
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <h2>Xóa Nhiệm Vụ</h2>
+
+    <h3>Bạn có chắc chắn muốn xóa không?</h3>
+    <div class="task-details">
+        <dl class="dl-horizontal">
+            <dt>ID Dự án</dt>
+            <dd>@Html.DisplayFor(model => model.DuAnID)</dd>
+
+            <dt>ID Người được giao</dt>
+            <dd>@Html.DisplayFor(model => model.NguoiDuocGiaoID)</dd>
+
+            <dt>Tên nhiệm vụ</dt>
+            <dd>@Html.DisplayFor(model => model.TenNhiemVu)</dd>
+
+            <dt>Mô tả</dt>
+            <dd>@Html.DisplayFor(model => model.MoTa)</dd>
+
+            <dt>Trạng thái</dt>
+            <dd>@Html.DisplayFor(model => model.TrangThai)</dd>
+
+            <dt>Ngày tạo</dt>
+            <dd>@Html.DisplayFor(model => model.NgayTao)</dd>
+
+            <dt>Hạn hoàn thành</dt>
+            <dd>@Html.DisplayFor(model => model.HanHoanThanh)</dd>
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions">
+                <input type="submit" value="Xóa" class="btn btn-danger" />
+                @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-secondary" })
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    h2 {
+        text-align: center;
+        color: #dc3545; /* Màu đỏ cho tiêu đề xóa */
+    }
+
+    h3 {
+        text-align: center;
+        color: #555;
+    }
+
+    .task-details {
+        margin-top: 20px;
+    }
+
+    .dl-horizontal dt {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .dl-horizontal dd {
+        margin-left: 0;
+        margin-bottom: 15px;
+        padding: 0 15px;
+        border-left: 4px solid #007bff;
+        background-color: #e9ecef;
+        border-radius: 4px;
+    }
+
+    .form-actions {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        margin: 5px;
+    }
+
+    .btn-danger {
+        background-color: #dc3545; /* Nút xóa màu đỏ */
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #27403E; /* Nút quay lại màu xám */
+        color: white;
+    }
+</style>
+

@@ -1,0 +1,43 @@
+﻿@model ProjectManagementWeb.Models.QuyenTruyCap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuyenTruyCap</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DuAnID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DuAnID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NguoiDungID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NguoiDungID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapQuyen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapQuyen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuyenTruyCapID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

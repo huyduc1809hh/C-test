@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ProjectManagementWeb.Models.DuAn>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    <meta charset="utf-8" />
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayBatDau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKetThuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NganSach)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayBatDau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayKetThuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NganSach)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DuAnID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DuAnID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DuAnID })
+            </td>
+        </tr>
+    }
+
+</table>

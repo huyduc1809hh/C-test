@@ -1,0 +1,75 @@
+﻿@model ProjectManagementWeb.Models.NhiemVu
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    <meta charset="utf-8" />
+}
+@using (Html.BeginForm("Create", "NhiemVu", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong class="text-uppercase text-danger">Thêm nhiệm vụ mới</strong>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="@Url.Action("Index", "NhiemVu")" class="btn btn-sm" style="background-color:#27403E;color:white">
+                        <i class="fas fa-arrow-left"></i> Quay về danh sách
+                    </a>
+                    <button type="submit" class="btn btn-sm btn-success">
+                        <i class="fas fa-save"></i> Lưu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-3">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Tên nhiệm vụ</label>
+                    @Html.EditorFor(model => model.TenNhiemVu, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TenNhiemVu, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>Mô tả</label>
+                    @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    @Html.DropDownListFor(model => model.TrangThai, new SelectList(new List<SelectListItem>
+                    {
+                        new SelectListItem {Text = "Chưa bắt đầu", Value = "Chưa bắt đầu"},
+                        new SelectListItem {Text = "Đang thực hiện", Value = "Đang thực hiện"},
+                        new SelectListItem {Text = "Đã hoàn thành", Value = "Đã hoàn thành"}
+                    }, "Value", "Text"), "Chọn trạng thái", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.TrangThai, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Dự án</label>
+                    @Html.DropDownList("DuAn", null, "Chọn dự án", htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DuAnID, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>Người thực hiện</label>
+                    @Html.DropDownList("NguoiDung", null, "Chọn người thực hiện", htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.NguoiDuocGiaoID, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>Ngày tạo</label>
+                    <input type="datetime-local" class="form-control" value="@Model.NgayTao?.ToString(" dd-MM-yyyy")" name="NgayTao" />
+                    @Html.ValidationMessageFor(model => model.NgayTao, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>Hạn hoàn thành</label>
+                    @Html.EditorFor(model => model.HanHoanThanh, new { htmlAttributes = new { @class = "form-control", type = "datetime-local" } })
+                    @Html.ValidationMessageFor(model => model.HanHoanThanh, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
