@@ -1,6 +1,4 @@
-﻿@model IEnumerable<ProjectManagementWeb.Models.NhiemVu>
-
-@{
+﻿@{
     ViewBag.Title = "NhiemVu";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
     <link href="~/Content/css/User/CSSNhiemVu.css" rel="stylesheet" />
@@ -12,36 +10,41 @@
     <div class="header">
         <div class="title">Bảng nhiệm vụ</div>
     </div>
-    @if (Model == null || !Model.Any())
-    {
-        <p>Không có nhiệm vụ nào được giao.</p>
-    }
-    else
-    {
-        <table class="table">
-            <tr style="text-align:center">
-                <th>ID Dự án</th>
-                <th>Tên nhiệm vụ</th>
-                <th>Mô tả</th>
-                <th>Trạng thái</th>
-                <th>Ngày tạo</th>
-                <th>Hạn hoàn thành</th>
+    <table>
+        <thead>
+            <tr>
+                <th>Thẻ</th>
+                <th>Danh sách</th>
+                <th>Nhãn</th>
+                <th>Thành viên</th>
+                <th>Ngày hết hạn</th>
             </tr>
-            @foreach (var item in Model)
-            {
-                <tr style="text-align:center">
-                    <td>@Html.DisplayFor(modelItem => item.DuAnID)</td>
-                    <td>@Html.DisplayFor(modelItem => item.TenNhiemVu)</td>
-                    <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
-                    <td>
-                        <span class="badge @(item.TrangThai == "Hoàn thành" ? "badge-success" : "badge-warning")">
-                            @Html.DisplayFor(modelItem => item.TrangThai)
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div style="padding:15px">
+                        <span class="tag tag-green"></span>
+                        Họp khởi động
+                        <span class="edit-icon">
+                            <i class="fas fa-pencil-alt"></i>
                         </span>
-                    </td>
-                    <td>@Html.DisplayFor(modelItem => item.NgayTao.HasValue ? item.NgayTao.Value.ToShortDateString() : "N/A")</td>
-                    <td>@Html.DisplayFor(modelItem => item.HanHoanThanh.HasValue ? item.HanHoanThanh.Value.ToShortDateString() : "N/A")</td>
-                </tr>
-            }
-        </table>
-    }
+                    </div>
+                </td>
+
+                <td>
+                    <div class="select-option">
+                        <select class="custom-select" style="background-color: #1c1e21; width:100%;">
+                            <option class="option" value="can-lam">Cần làm</option>
+                            <option class="option" value="dang-lam">Đang làm</option>
+                            <option class="option" value="hoan-thanh">Hoàn thành</option>
+                        </select>
+                    </div>
+                </td>
+                <td class="add"></td>
+                <td class="add"></td>
+                <td class="add"></td>
+            </tr>
+        </tbody>
+    </table>
 </div>

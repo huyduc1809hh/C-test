@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link href="~/Content/css/Admin/Timeline.css" rel="stylesheet" />
+
+<h2>Danh sách Dự Án</h2>
+<ul id="duAnList">
+    @foreach (var duAn in Model)
+    {
+        <li>
+            <a href="javascript:void(0);" onclick="showTimeline(@duAn.DuAnID)">@duAn.MoTa</a>
+        </li>
+    }
+</ul>
+
+<!-- Đặt div chart ở đây -->
+<div class="chartCard">
+    <div class="chartBox" style="width: 80%; height: 400px; margin: auto;">
+        <canvas id="myChart"></canvas>
+    </div>
+</div>
+
+<!-- Đảm bảo thứ tự load script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="~/Content/JS/Timeline.js"></script>

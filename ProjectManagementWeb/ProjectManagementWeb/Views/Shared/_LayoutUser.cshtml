@@ -21,7 +21,7 @@
         </div>
         <div class="right">
             <div class="profile">
-                <i class="fas fa-bell" id="notification-icon"></i>
+                <i class="fas fa-bell"></i>
                 <i class="fas fa-user-circle" id="avatar-btn"></i>
                 <div class="menu" id="menu">
                     <p>Tài khoản</p>
@@ -110,39 +110,7 @@
         <div class="content-main">
             @RenderBody()
         </div>
-        <!-- Danh sách nhiệm vụ mới nhất -->
-        <div id="notification-list" class="absolute right-0 bg-white shadow-lg p-4 mt-2 hidden top-16" style="background-color:#2a2c2f">
-            <h4 class="font-bold" style="color:#87df2c; font-size: 20px">Nhiệm vụ mới nhất</h4>
-            <ul id="task-list"></ul>
-        </div>
     </div>
-    <script>
-        const notificationIcon = document.getElementById('notification-icon');
-        const notificationList = document.getElementById('notification-list');
-        const taskList = document.getElementById('task-list');
-
-        notificationIcon.addEventListener('click', () => {
-        notificationList.classList.toggle('hidden');
-
-        // Gọi AJAX để lấy nhiệm vụ mới nhất
-        fetch('@Url.Action("GetLatestTasks", "NhiemVu")')
-            .then(response => response.json())
-            .then(data => {
-                taskList.innerHTML = ''; // Xóa danh sách hiện tại
-                data.forEach(task => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${task.TenNhiemVu} - ${task.MoTa} (Ngày tạo: ${new Date(task.NgayTao).toLocaleDateString()})`;
-                    taskList.appendChild(listItem);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching tasks:', error);
-                const errorMessage = document.createElement('li');
-                errorMessage.textContent = 'Đang tải...';
-                taskList.appendChild(errorMessage);
-            });
-    });
-    </script>
     <script src="~/Content/JS/JSUser.js"></script>
 </body>
 </html>

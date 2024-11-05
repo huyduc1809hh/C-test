@@ -1,12 +1,97 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|c:\\users\\acer\\documents\\zalo received files\\projectmanagementweb\\projectmanagementweb\\projectmanagementweb\\views\\admin\\homeadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\admin\\homeadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\projectmanagementweb\\views\\budgets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\budgets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\projectmanagementweb\\views\\budgets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\budgets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CNPM-NC\\Create dbo.NganSach.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\projectmanagementweb\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Budgets\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\Budgets\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Budgets\\Edit.cshtml",
+              "RelativeToolTip": "ProjectManagementWeb\\Views\\Budgets\\Edit.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADYAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T18:45:22.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Admin\\HomeAdmin.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\Admin\\HomeAdmin.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Admin\\HomeAdmin.cshtml",
+              "RelativeToolTip": "ProjectManagementWeb\\Views\\Admin\\HomeAdmin.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAABIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T18:04:54.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create dbo.NganSach.sql",
+              "DocumentMoniker": "D:\\CNPM-NC\\Create dbo.NganSach.sql",
+              "ToolTip": "D:\\CNPM-NC\\Create dbo.NganSach.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-28T17:02:53.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Budgets\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\Budgets\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Budgets\\Create.cshtml",
+              "RelativeToolTip": "ProjectManagementWeb\\Views\\Budgets\\Create.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAADgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T17:27:57.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Zalo Received Files\\ProjectManagementWeb\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "ProjectManagementWeb\\Views\\User\\Index.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-22T17:44:36.414Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

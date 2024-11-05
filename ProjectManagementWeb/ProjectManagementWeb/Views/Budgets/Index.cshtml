@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ProjectManagementWeb.Models.NganSach>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link href="~/Content/css/Admin/CSSBudgets.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+<h2>Quản lý ngân sách</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new {@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DuAnID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayCapNhat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DuAnID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NganSachID }, new {@class="btn btn-success"}) |
+            @Html.ActionLink("Details", "Details", new { id=item.NganSachID }, new { @class = "btn btn-danger"}) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NganSachID }, new { @class = "btn btn-dark" })
+        </td>
+    </tr>
+}
+
+</table>

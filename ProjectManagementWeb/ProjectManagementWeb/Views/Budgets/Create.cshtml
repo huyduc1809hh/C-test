@@ -1,0 +1,135 @@
+﻿@model ProjectManagementWeb.Models.NganSach
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thêm ngân sách</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.DuAnID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DuAnID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DuAnID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SoTien, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SoTien, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SoTien, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MoTa, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NgayCapNhat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NgayCapNhat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NgayCapNhat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+                @Html.ActionLink("Quay lai", "Index", null, new { @class = "btn btn-dark" })
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+              
+</div>
+<style>
+
+    /* Tiêu đề */
+    h2 {
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* Form */
+    .form-horizontal {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto; /* Căn giữa form */
+    }
+
+    /* Nút Quay lại và Nút Dark */
+    .btn-back, .btn-dark {
+        background-color: #343a40;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-back:hover, .btn-dark:hover {
+            background-color: #23272b;
+            color: #fff;
+        }
+
+    /* Nút Create */
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-right: 10px; /* Khoảng cách giữa hai nút */
+    }
+
+    /* Điều chỉnh khoảng cách giữa các trường */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Thay đổi màu sắc khi hover */
+    .btn-dark:hover {
+        background-color: #fff;
+        color: #343a40;
+        border-color: #343a40;
+    }
+
+    /* Tin nhắn lỗi */
+    .text-danger {
+        color: #dc3545;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    /* Điều chỉnh vị trí của nút Create */
+    .form-group .col-md-offset-2 {
+        margin-left: 0;
+        text-align: right;
+    }
+
+</style>
